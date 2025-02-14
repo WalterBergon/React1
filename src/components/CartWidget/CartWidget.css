@@ -1,0 +1,12 @@
+.cart-widget {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.cart-count {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(251, 5, 5);
+}
