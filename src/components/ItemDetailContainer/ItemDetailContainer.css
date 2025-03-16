@@ -1,0 +1,11 @@
+.item-detail-container {
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.detail-wrapper {
+    max-width: 800px;
+    width: 100%;
+}

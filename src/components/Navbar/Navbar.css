@@ -22,3 +22,45 @@
     /*tambien*/
     color: rgb(248, 193, 91);
 }
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navbar.css */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.logo-img {
+    width: 120px;
+    /* Ajusta según el tamaño de tu logo */
+    height: auto;
+}
+
+.nav-bar-ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-bar-li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar-li a:hover {
+    text-decoration: underline;
+}
+
+.cart-widget {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

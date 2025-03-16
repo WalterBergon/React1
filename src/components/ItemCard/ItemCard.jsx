@@ -1,20 +1,23 @@
+import { Link } from 'react-router-dom'; // Para "Ver Detalle"
+import { useCart } from '../../context/CartContext'; // Para el carrito
 import './ItemCard.css';
 
-function ItemCard(props) {
-
-    const { nombre, precio } = props; //es el destructurin de props y te toma todo poniendo nomnre y precio
-    //Tambien se puede hacer en la función: function ItemCard({nombre, precio}) {} esta recibiendo un objeto.
-    function agregarCarrito() {
-        console.log("Agregando", nombre);
-    }
+function ItemCard({ id, nombre, precio }) {
+    const { addToCart } = useCart(); // Función para añadir al carrito
 
     return (
         <div className='card'>
             <h2>{nombre || "No Hay Che"}</h2>
-            <h3>{precio || "No Precio"}</h3>
-            <button disabled={!nombre} className='card-btn' onClick={() => agregarCarrito()}>agregar al Carrto</button>
-        </div> //disabled={!nombre} hace que este desabilitado el boton si no hay nombre o sea producto.
-    )
+            <h3>${precio || "No Precio"}</h3>
+            <button
+                className='card-btn'
+                onClick={() => addToCart({ id, nombre, precio })} // Añade al carrito
+            >
+                Agregar al carrito
+            </button>
+            <Link to={`/item/${id}`} className="detail-link">Ver Detalle</Link> {/* Enlace al detalle */}
+        </div>
+    );
 }
 
 export default ItemCard;
