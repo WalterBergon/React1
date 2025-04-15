@@ -22,6 +22,8 @@ function ItemListContainer({ greeting }) {
                         id={product.id}
                         nombre={product.nombre}
                         precio={product.precio}
+                        img={product.img}
+                        stock={product.stock}  // Asegurá pasar el stock
                     />
                 ))}
             </div>

@@ -38,7 +38,7 @@
     color: #111;
 }
 
-/* Si querés centrar el contenido en pantallas pequeñas */
+
 @media (max-width: 768px) {
     .item-detail {
         grid-template-columns: 1fr;
@@ -48,4 +48,10 @@
     .item-detail img {
         max-height: 300px;
     }
+}
+
+body {
+    background-color: #323232;
+    margin: 0;
+    font-family: sans-serif;
 }

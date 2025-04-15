@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #323232;
+  /* Gris oscuro, podés cambiarlo */
+  color: #c30404;
+  /* Texto claro */
+  margin: 0;
+  font-family: sans-serif;
+}

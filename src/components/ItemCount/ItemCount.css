@@ -28,3 +28,8 @@
 .item-count button:active {
     transform: scale(0.95);
 }
+
+.item-count button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

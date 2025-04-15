@@ -17,9 +17,10 @@ function ItemCount({ stock, initial = 1, onAdd }) {
             <div className="count-controls">
                 <button onClick={handleSubtract}>-</button>
                 <span>{count}</span>
-                <button onClick={handleAdd}>+</button>
+                <button onClick={handleAdd} disabled={count >= stock}>+</button>
             </div>
             <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <p className="stock-info">Stock disponible: {stock}</p>
         </div>
     );
 }
