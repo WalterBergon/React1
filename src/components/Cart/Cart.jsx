@@ -1,10 +1,16 @@
-import { useCart } from '../../context/CartContext'; // Importa el contexto
+import { useCart } from '../../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 import './Cart.css';
 
 function Cart() {
-    const { cart, removeFromCart } = useCart(); // Obtiene el carrito y la función para eliminar
+    const { cart, removeFromCart } = useCart();
+    const navigate = useNavigate();
 
     const total = cart.reduce((sum, item) => sum + (item.precio * item.quantity), 0);
+
+    const handleCheckout = () => {
+        navigate('/checkout');
+    };
 
     return (
         <div className="cart-view">
@@ -20,13 +26,16 @@ function Cart() {
                             <p>Subtotal: ${item.precio * item.quantity}</p>
                             <button
                                 className="remove-btn"
-                                onClick={() => removeFromCart(item.id)} // Elimina el producto
+                                onClick={() => removeFromCart(item.id)}
                             >
                                 Eliminar
                             </button>
                         </div>
                     ))}
                     <h3>Total: ${total}</h3>
+                    <button className="checkout-btn" onClick={handleCheckout}>
+                        Finalizar compra
+                    </button>
                 </>
             )}
         </div>

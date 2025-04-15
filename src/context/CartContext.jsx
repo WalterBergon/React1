@@ -20,13 +20,19 @@ export const CartProvider = ({ children }) => {
     };
 
     const removeFromCart = (id) => {
-        setCart(prev => prev.filter(item => item.id !== id)); // Elimina el producto
+        setCart(prev => prev.filter(item => item.id !== id));
+    };
+
+    const clearCart = () => {
+        setCart([]);
     };
 
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, totalItems }}>
+        <CartContext.Provider
+            value={{ cart, addToCart, removeFromCart, clearCart, totalItems }}
+        >
             {children}
         </CartContext.Provider>
     );

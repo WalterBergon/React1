@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemCard from '../ItemCard/ItemCard';
-import { getProducts } from "../../utils/mockData";
+import { getProducts } from "../../utils/firebaseService";
 import './ItemListContainer.css';
 
 function ItemListContainer({ greeting }) {

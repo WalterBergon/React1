@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail'; // Crea este componente
-import { getProductById } from "../../utils/mockData"
+import { getProductById } from "../../utils/firebaseService";
 import '../ItemDetailContainer/ItemDetailContainer.css';
 function ItemDetailContainer() {
     const [product, setProduct] = useState(null);
