@@ -6,14 +6,15 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBjKhU0MmlnwrPwfjHlQEWyIF_k6fQWIEI",
-    authDomain: "entrega-75915-coder.firebaseapp.com",
-    projectId: "entrega-75915-coder",
-    storageBucket: "entrega-75915-coder.firebasestorage.app",
-    messagingSenderId: "759331756503",
-    appId: "1:759331756503:web:24d05a0229de4f9e265392"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DO,
+    projectId: import.meta.env.VITE_PROJET_I,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING,
+    appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+
